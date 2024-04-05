@@ -1,0 +1,266 @@
+body {
+    color: rgb(40, 40, 40);
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #F3F4F8;
+}
+
+.top-box {
+    background-color: #222222;
+    color: white;
+    height: 100vh;
+    width: 100%;
+}
+
+.top-box .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+}
+
+.top-box .image {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    border-radius: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 12px 12px 29px #555;
+}
+
+.main {
+    padding: 40px;
+    margin: 0;
+}
+
+.main h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+#was {
+    background-image: url('img/IMG_0461.JPG');
+}
+
+#vorgeschichte {
+    background-image: url('img/IMG_0466.PNG');
+}
+
+#vertragsparteien {
+    background-image: url('img/IMG_0123.jpg');
+    background-size: 1200px;
+}
+
+#inhalt {
+    background-image: url('img/IMG_0124.JPG');
+    background-position: bottom;
+}
+
+#bewertung {
+    background-image: url('img/IMG_0125.JPG');
+    background-position: center;
+}
+
+.categorys .category {
+    width: 80%;
+    height: 600px;
+    border-radius: 40px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0 0 400px rgb(0, 0, 0) inset, 12px 12px 29px #555;
+    margin-bottom: 60px;
+    background-position: center;
+}
+
+.categorys a {
+    text-decoration: none;
+}
+
+.categorys .category:hover {
+    animation: bigger 0.3s ease forwards;
+}
+
+.categorys .category:not(:hover) {
+    animation: smaller 0.3s ease forwards;
+}
+
+.categorys .category .read {
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.categorys .category:hover .read {
+    animation: appear 0.3s ease forwards;
+}
+
+.categorys .category:not(:hover) .read {
+    animation: disappear 0.3s ease forwards;
+}
+
+
+@keyframes bigger {
+    0% {
+        width: 80%;
+        height: 600px;
+    }
+    100% {
+        width: 85%;
+        height: 620px;
+    }
+}
+
+@keyframes smaller {
+    0% {
+        width: 85%;
+        height: 620px;
+    }
+    100% {
+        width: 80%;
+        height: 600px;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.categorys .category h1 {
+    color: white;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.categorys .category img {
+    width: 80%;
+    height: auto;
+}
+
+.footer {
+    background-color: #222222;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer .quellen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer .empfehlenswert {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer h1 {
+    color: white;
+    font-size: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+.footer h2 {
+    color: white;
+    font-size: 20px;
+    padding-top: 40px;
+}
+
+.top-box p {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px){
+    .top-box .text {
+        font-size: 18px;
+        display: block;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .top-box .image {
+        width: 90%;
+    }
+
+    .top-box p {display: block;}
+
+    .main h1 {
+        font-size: 40px;
+    }
+
+    .categorys .category {
+        width: 95%;
+    }
+
+    @keyframes bigger {
+        0% {
+            width: 90%;
+            height: 600px;
+        }
+        100% {
+            width: 95%;
+            height: 620px;
+        }
+    }
+    
+    @keyframes smaller {
+        0% {
+            width: 95%;
+            height: 620px;
+        }
+        100% {
+            width: 90%;
+            height: 600px;
+        }
+    }
+
+    .categorys .category h1 {
+        font-size: 25px;
+        padding: 10px;
+        padding-top: 40px;
+    }
+
+    .footer {
+        height: 450px;
+    }
+
+    .footer h1 {
+        font-size: 15px;
+    }
+
+    .footer h2 {
+        font-size: 15px;
+    }
+
+}
